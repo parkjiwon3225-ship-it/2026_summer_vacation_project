@@ -1,0 +1,21 @@
+{
+  "source": {
+    "epoch": 52,
+    "best_map50_95": 0.2880503188818693,
+    "input": [
+      1,
+      3,
+      480,
+      640
+    ]
+  },
+  "samples": 30,
+  "threads": 2,
+  "pytorch_vs_fp32": {
+    "score_max_abs": 5.960464477539062e-07,
+    "score_mean_abs": 1.525746284869456e-08,
+    "box_max_abs": 0.000274658203125,
+    "box_mean_abs": 6.200744489130254e-06
+  },
+  "csv": "C:\\Users\\Parkj\\Desktop\\results27_lightweight_pipeline\\results27_lightweight_pipeline\\results\\offline_preservation_summary.csv"
+}

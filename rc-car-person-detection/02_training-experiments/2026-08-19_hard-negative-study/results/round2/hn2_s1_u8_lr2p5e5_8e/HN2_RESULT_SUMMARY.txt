@@ -1,0 +1,19 @@
+﻿HN2 RESULT SUMMARY
+========================================================================
+model: S1
+baseline validation: mAP=0.260738, P=0.701048, R=0.512335, F1=0.592016
+baseline HN eval60: fp_images=12, fp_boxes=13, max_score=0.377197
+
+EPOCHS
+e1: mAP=0.255830 P=0.600450 R=0.559497 F1=0.579250 | FPimg=18 FPbox=22 max=0.480957 | candidate=False strong=False
+e2: mAP=0.258457 P=0.646855 R=0.541358 F1=0.589423 | FPimg=10 FPbox=11 max=0.428467 | candidate=False strong=False
+e3: mAP=0.258840 P=0.614813 R=0.554095 F1=0.582877 | FPimg=9 FPbox=11 max=0.447021 | candidate=False strong=False
+e4: mAP=0.257899 P=0.607606 R=0.559013 F1=0.582298 | FPimg=11 FPbox=14 max=0.443604 | candidate=False strong=False
+e5: mAP=0.257741 P=0.627510 R=0.551677 F1=0.587155 | FPimg=8 FPbox=9 max=0.444824 | candidate=True strong=False
+e6: mAP=0.257591 P=0.617146 R=0.558288 F1=0.586243 | FPimg=7 FPbox=8 max=0.423584 | candidate=True strong=False
+e7: mAP=0.260041 P=0.647564 R=0.546598 F1=0.592813 | FPimg=7 FPbox=8 max=0.432373 | candidate=True strong=False
+e8: mAP=0.258095 P=0.621788 R=0.554015 F1=0.585948 | FPimg=11 FPbox=12 max=0.460693 | candidate=False strong=False
+
+AUTO CANDIDATE: epoch 7
+reason: passes fixed S1 retention/FP gates; ranked by fewer FP boxes then higher mAP/Recall/F1.
+NOTE: this is only the HN2 screening result. Final deployment still requires Pi quantization/live test.

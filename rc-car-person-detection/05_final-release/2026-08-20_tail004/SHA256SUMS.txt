@@ -1,0 +1,2 @@
+230755c15376065bdfbcea44cbc9259d9691ec48319bc96bdbfb15c38b3e01be  models/person_detector_tail004_int8.onnx
+ecdc4875c11fcb68f977eb1785d00d45ceb303b1e2fbc5a490a519b1b4124563  models/person_detector_r46_fp32_reference.onnx

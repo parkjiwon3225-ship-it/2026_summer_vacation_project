@@ -1,0 +1,37 @@
+{
+  "source": "C:\\Users\\Parkj\\Desktop\\results27_lightweight_pipeline\\results27_lightweight_pipeline\\models\\results27_640_fp32.onnx",
+  "preprocessed": "C:\\Users\\Parkj\\Desktop\\results27_lightweight_pipeline\\results27_lightweight_pipeline\\models\\results27_640_fp32_preprocessed_round3.onnx",
+  "calibration_samples": 160,
+  "percentile": 99.99,
+  "conv_group_counts": {
+    "backbone": 31,
+    "fpn": 12,
+    "head": 44
+  },
+  "variants": [
+    {
+      "tag": "backbone_only",
+      "status": "PASS",
+      "file": "results27_640_int8_round3_backbone_only.onnx",
+      "nodes_quantized": 31,
+      "size_mb": 0.696044921875,
+      "quant_sec": 320.2043804000132
+    },
+    {
+      "tag": "backbone_fpn",
+      "status": "PASS",
+      "file": "results27_640_int8_round3_backbone_fpn.onnx",
+      "nodes_quantized": 43,
+      "size_mb": 0.6495914459228516,
+      "quant_sec": 256.5686516999849
+    },
+    {
+      "tag": "no_head",
+      "status": "PASS",
+      "file": "results27_640_int8_round3_no_head.onnx",
+      "nodes_quantized": 43,
+      "size_mb": 0.6495914459228516,
+      "quant_sec": 248.18838130001677
+    }
+  ]
+}

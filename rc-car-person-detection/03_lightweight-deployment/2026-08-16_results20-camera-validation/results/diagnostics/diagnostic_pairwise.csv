@@ -1,0 +1,3 @@
+﻿model,fp32_detections,candidate_detections,matched,missed,extra,retention_pct,mean_iou,mean_score_delta,frames,scene
+int8_minmax,324,510,273,51,237,84.26,0.8666,-0.0106,300,person_present_rerun_2026-08-16
+int8_percentile,324,504,282,42,222,87.04,0.8862,-0.0063,300,person_present_rerun_2026-08-16

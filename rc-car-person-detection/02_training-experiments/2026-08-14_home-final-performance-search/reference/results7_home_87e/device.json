@@ -1,0 +1,9 @@
+{
+  "device": "cuda",
+  "torch_version": "2.3.1",
+  "cuda_build": "12.1",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce MX570 A",
+  "gpu_vram_gib": 4.0,
+  "compute_capability": "8.6"
+}

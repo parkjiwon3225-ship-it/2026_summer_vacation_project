@@ -1,0 +1,61 @@
+{
+  "fp32": "C:\\Users\\Parkj\\Desktop\\results27_lightweight_pipeline\\results27_lightweight_pipeline\\models\\results27_640_fp32.onnx",
+  "preprocessed": "C:\\Users\\Parkj\\Desktop\\results27_lightweight_pipeline\\results27_lightweight_pipeline\\models\\results27_640_fp32_preprocessed.onnx",
+  "calibration_samples": 400,
+  "percentile": 99.99,
+  "variants": [
+    {
+      "tag": "s8s8_conv_entropy",
+      "file": "results27_640_int8_round2_s8s8_conv_entropy.onnx",
+      "size_mb": 0.7577781677246094,
+      "quant_sec": 72.69345009996323,
+      "activation_type": "QInt8",
+      "weight_type": "QInt8",
+      "calibration_method": "CalibrationMethod.Entropy",
+      "calibration_samples_used": 64,
+      "status": "PASS"
+    },
+    {
+      "tag": "u8u8_conv_minmax",
+      "file": "results27_640_int8_round2_u8u8_conv_minmax.onnx",
+      "size_mb": 0.7610559463500977,
+      "quant_sec": 31.0085059000412,
+      "activation_type": "QUInt8",
+      "weight_type": "QUInt8",
+      "calibration_method": "CalibrationMethod.MinMax",
+      "calibration_samples_used": 400,
+      "status": "PASS"
+    },
+    {
+      "tag": "u8u8_conv_percentile",
+      "activation_type": "QUInt8",
+      "weight_type": "QUInt8",
+      "calibration_method": "CalibrationMethod.Percentile",
+      "calibration_samples_used": 400,
+      "quant_sec": 53.936486800026614,
+      "status": "FAIL",
+      "error": "MemoryError: Unable to allocate 3.52 MiB for an array with shape (480, 640, 3) and data type float32"
+    },
+    {
+      "tag": "u8s8_conv_minmax",
+      "file": "results27_640_int8_round2_u8s8_conv_minmax.onnx",
+      "size_mb": 0.7568197250366211,
+      "quant_sec": 32.93998979998287,
+      "activation_type": "QUInt8",
+      "weight_type": "QInt8",
+      "calibration_method": "CalibrationMethod.MinMax",
+      "calibration_samples_used": 400,
+      "status": "PASS"
+    },
+    {
+      "tag": "u8s8_conv_percentile",
+      "activation_type": "QUInt8",
+      "weight_type": "QInt8",
+      "calibration_method": "CalibrationMethod.Percentile",
+      "calibration_samples_used": 400,
+      "quant_sec": 123.37989159999415,
+      "status": "FAIL",
+      "error": "MemoryError: Unable to allocate 3.52 MiB for an array with shape (1, 3, 480, 640) and data type float32"
+    }
+  ]
+}

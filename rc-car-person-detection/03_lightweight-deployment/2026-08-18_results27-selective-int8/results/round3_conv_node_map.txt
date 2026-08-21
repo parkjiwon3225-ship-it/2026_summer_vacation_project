@@ -1,0 +1,91 @@
+model=models/results27_640_fp32.onnx
+total_conv=87
+groups={'backbone': 31, 'fpn': 12, 'head': 44}
+
+000 [backbone] /model/backbone/stem/stem.0/Conv
+001 [backbone] /model/backbone/stage1/stage1.0/expand/expand.0/Conv
+002 [backbone] /model/backbone/stage1/stage1.0/depthwise/depthwise.0/Conv
+003 [backbone] /model/backbone/stage1/stage1.0/project/project.0/Conv
+004 [backbone] /model/backbone/stage1/stage1.1/expand/expand.0/Conv
+005 [backbone] /model/backbone/stage1/stage1.1/depthwise/depthwise.0/Conv
+006 [backbone] /model/backbone/stage1/stage1.1/project/project.0/Conv
+007 [backbone] /model/backbone/stage2/stage2.0/expand/expand.0/Conv
+008 [backbone] /model/backbone/stage2/stage2.0/depthwise/depthwise.0/Conv
+009 [backbone] /model/backbone/stage2/stage2.0/project/project.0/Conv
+010 [backbone] /model/backbone/stage2/stage2.1/expand/expand.0/Conv
+011 [backbone] /model/backbone/stage2/stage2.1/depthwise/depthwise.0/Conv
+012 [backbone] /model/backbone/stage2/stage2.1/project/project.0/Conv
+013 [backbone] /model/backbone/stage2/stage2.2/expand/expand.0/Conv
+014 [backbone] /model/backbone/stage2/stage2.2/depthwise/depthwise.0/Conv
+015 [backbone] /model/backbone/stage2/stage2.2/project/project.0/Conv
+016 [backbone] /model/backbone/stage3/stage3.0/expand/expand.0/Conv
+017 [backbone] /model/backbone/stage3/stage3.0/depthwise/depthwise.0/Conv
+018 [backbone] /model/backbone/stage3/stage3.0/project/project.0/Conv
+019 [backbone] /model/backbone/stage3/stage3.1/expand/expand.0/Conv
+020 [backbone] /model/backbone/stage3/stage3.1/depthwise/depthwise.0/Conv
+021 [backbone] /model/backbone/stage3/stage3.1/project/project.0/Conv
+022 [backbone] /model/backbone/stage3/stage3.2/expand/expand.0/Conv
+023 [backbone] /model/backbone/stage3/stage3.2/depthwise/depthwise.0/Conv
+024 [backbone] /model/backbone/stage3/stage3.2/project/project.0/Conv
+025 [backbone] /model/backbone/stage4/stage4.0/expand/expand.0/Conv
+026 [backbone] /model/backbone/stage4/stage4.0/depthwise/depthwise.0/Conv
+027 [backbone] /model/backbone/stage4/stage4.0/project/project.0/Conv
+028 [backbone] /model/backbone/stage4/stage4.1/expand/expand.0/Conv
+029 [backbone] /model/backbone/stage4/stage4.1/depthwise/depthwise.0/Conv
+030 [backbone] /model/backbone/stage4/stage4.1/project/project.0/Conv
+031 [fpn     ] /model/fpn/lateral5/lateral5.0/Conv
+032 [fpn     ] /model/fpn/lateral4/lateral4.0/Conv
+033 [fpn     ] /model/fpn/lateral3/lateral3.0/Conv
+034 [fpn     ] /model/fpn/lateral2/lateral2.0/Conv
+035 [fpn     ] /model/fpn/refine5/refine5.0/refine5.0.0/Conv
+036 [fpn     ] /model/fpn/refine5/refine5.1/refine5.1.0/Conv
+037 [fpn     ] /model/fpn/refine4/refine4.0/refine4.0.0/Conv
+038 [fpn     ] /model/fpn/refine4/refine4.1/refine4.1.0/Conv
+039 [fpn     ] /model/fpn/refine3/refine3.0/refine3.0.0/Conv
+040 [fpn     ] /model/fpn/refine3/refine3.1/refine3.1.0/Conv
+041 [fpn     ] /model/fpn/refine2/refine2.0/refine2.0.0/Conv
+042 [fpn     ] /model/fpn/refine2/refine2.1/refine2.1.0/Conv
+043 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.0/classification_tower.0.0.0/Conv
+044 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.1/classification_tower.0.1.0/Conv
+045 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.0/classification_tower.1.0.0/Conv
+046 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.1/classification_tower.1.1.0/Conv
+047 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.0/regression_tower.0.0.0/Conv
+048 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.1/regression_tower.0.1.0/Conv
+049 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.0/regression_tower.1.0.0/Conv
+050 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.1/regression_tower.1.1.0/Conv
+051 [head    ] /model/head/classification_output/Conv
+052 [head    ] /model/head/quality_output/Conv
+053 [head    ] /model/head/regression_output/Conv
+054 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.0/classification_tower.0.0.0_1/Conv
+055 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.1/classification_tower.0.1.0_1/Conv
+056 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.0/classification_tower.1.0.0_1/Conv
+057 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.1/classification_tower.1.1.0_1/Conv
+058 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.0/regression_tower.0.0.0_1/Conv
+059 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.1/regression_tower.0.1.0_1/Conv
+060 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.0/regression_tower.1.0.0_1/Conv
+061 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.1/regression_tower.1.1.0_1/Conv
+062 [head    ] /model/head/classification_output_1/Conv
+063 [head    ] /model/head/quality_output_1/Conv
+064 [head    ] /model/head/regression_output_1/Conv
+065 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.0/classification_tower.0.0.0_2/Conv
+066 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.1/classification_tower.0.1.0_2/Conv
+067 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.0/classification_tower.1.0.0_2/Conv
+068 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.1/classification_tower.1.1.0_2/Conv
+069 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.0/regression_tower.0.0.0_2/Conv
+070 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.1/regression_tower.0.1.0_2/Conv
+071 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.0/regression_tower.1.0.0_2/Conv
+072 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.1/regression_tower.1.1.0_2/Conv
+073 [head    ] /model/head/classification_output_2/Conv
+074 [head    ] /model/head/quality_output_2/Conv
+075 [head    ] /model/head/regression_output_2/Conv
+076 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.0/classification_tower.0.0.0_3/Conv
+077 [head    ] /model/head/classification_tower/classification_tower.0/classification_tower.0.1/classification_tower.0.1.0_3/Conv
+078 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.0/classification_tower.1.0.0_3/Conv
+079 [head    ] /model/head/classification_tower/classification_tower.1/classification_tower.1.1/classification_tower.1.1.0_3/Conv
+080 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.0/regression_tower.0.0.0_3/Conv
+081 [head    ] /model/head/regression_tower/regression_tower.0/regression_tower.0.1/regression_tower.0.1.0_3/Conv
+082 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.0/regression_tower.1.0.0_3/Conv
+083 [head    ] /model/head/regression_tower/regression_tower.1/regression_tower.1.1/regression_tower.1.1.0_3/Conv
+084 [head    ] /model/head/classification_output_3/Conv
+085 [head    ] /model/head/quality_output_3/Conv
+086 [head    ] /model/head/regression_output_3/Conv

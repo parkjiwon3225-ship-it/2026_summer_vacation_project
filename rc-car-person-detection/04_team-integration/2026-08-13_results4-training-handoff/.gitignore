@@ -1,0 +1,7 @@
+# 이 폴더에는 검증된 단일 전달 checkpoint만 의도적으로 포함합니다.
+*.pt
+!model/results4_fpn48_best.pt
+!model/results4_fpn48_last.pt
+
+__pycache__/
+*.pyc

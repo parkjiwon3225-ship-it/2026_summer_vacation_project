@@ -1,0 +1,20 @@
+{
+  "models": [
+    {
+      "name": "results20_fp32_320",
+      "path": "models/results20_fpn48_fp32.onnx"
+    },
+    {
+      "name": "results20_int8_percentile_320",
+      "path": "models/results20_fpn48_int8_qdq_percentile.onnx"
+    },
+    {
+      "name": "results27_fp32_640",
+      "path": "models/results27_640_fp32.onnx"
+    },
+    {
+      "name": "results27_mixed_q3q4_640",
+      "path": "models/results27_640_int8_round4_q3_q4_suffix50.onnx"
+    }
+  ]
+}

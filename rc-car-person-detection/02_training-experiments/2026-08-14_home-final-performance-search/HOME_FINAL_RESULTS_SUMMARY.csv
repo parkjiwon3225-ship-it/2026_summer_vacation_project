@@ -1,0 +1,3 @@
+source,experiment,last_epoch,best_epoch,best_map50_95,best_ap50,best_ap75,best_precision,best_recall,best_f1,best_tiny_recall,best_small_recall,last_map50_95,last_valid_total,decision
+results.14,r3_school1_fpn48_exp200_seed11,30,29,0.253237785,0.550494,0.201683,0.673189,0.510319,0.580548,0.073853,0.453307,0.235006,1.641767,home_final_search_seed
+results.7,r2_home_fpn48_lr0750_seed2_100e,87,62,0.224345715,0.496195,0.174479,0.755623,0.379152,0.504939,0.007339,0.217348,0.208602320,1.647612,stop_plateau_keep_as_reference

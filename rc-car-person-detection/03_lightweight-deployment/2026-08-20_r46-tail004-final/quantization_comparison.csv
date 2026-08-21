@@ -1,0 +1,4 @@
+variant,quantized_backbone_conv_nodes,size_mb,reduction_vs_fp32_percent,retain_at_conf_0_25,mean_iou_at_conf_0_25,missed_at_conf_0_25,extra_at_conf_0_25,pc_infer_ms_avg,final_status
+Q3Q4_CONTROL,15,0.7287282944,45.11055081,0.9770554493,0.9762640067,12,17,18.96635917,control
+TAIL004,19,0.7003402710,47.24880039,0.9789674952,0.9745783647,11,17,19.47585500,selected
+TAIL006,21,0.6920833588,47.87072953,0.9827915870,0.9727802472,9,19,20.22633417,research_alternative

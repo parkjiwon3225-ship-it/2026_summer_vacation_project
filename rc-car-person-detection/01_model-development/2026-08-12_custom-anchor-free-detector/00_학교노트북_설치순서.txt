@@ -1,0 +1,76 @@
+RC-CAR PERSON DETECTOR - 학교 노트북 설치 순서
+================================================
+
+[중요]
+- Anaconda Prompt에서 실행한다.
+- 모든 명령은 rc_person_detector 프로젝트 폴더에서 실행한다.
+- 전체 학습 전에 CUDA mini-overfit까지 모두 PASS해야 한다.
+- Test split은 최종 모델 확정 전에는 사용하지 않는다.
+
+1. 프로젝트 폴더 이동
+--------------------
+cd /d 프로젝트경로\rc_person_detector
+
+2. 데이터 파일 수 확인
+----------------------
+powershell -NoProfile -Command "(Get-ChildItem 'data\processed\v1_grouped' -File -Recurse).Count"
+
+정상 값: 30780
+
+3. GPU 확인
+-----------
+nvidia-smi
+
+4. Conda 환경 생성(처음 한 번만)
+--------------------------------
+conda env create -f environment-school.yml
+conda activate rc-person-detector
+python -m pip install -e .
+
+이미 환경이 있으면:
+conda activate rc-person-detector
+python -m pip install -e .
+
+5. CUDA 연결 확인
+-----------------
+python -c "import torch; print(torch.__version__); print(torch.version.cuda); print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'NONE')"
+
+정상 조건: True 및 실제 NVIDIA GPU 이름
+
+6. 사전 검사
+------------
+python scripts\13_test_training_step.py
+python scripts\14_test_inference.py
+python scripts\17_test_metrics.py
+python scripts\18_test_monitoring.py
+python scripts\19_validate_experiments.py
+python scripts\15_mini_overfit.py --device cuda
+
+모두 STATUS: PASS 확인
+
+7. 학습 실행
+-----------
+노트북별로 지정된 configs\experiments\*.json을 사용한다.
+
+python scripts\16_train.py --config configs\experiments\지정파일.json
+
+8. 학습 결과
+------------
+results\training\실험이름\history.csv
+results\training\실험이름\warnings.log
+results\training\실험이름\device.json
+results\training\실험이름\checkpoints\best.pt
+results\training\실험이름\checkpoints\last.pt
+
+9. 중단 후 재개
+--------------
+python scripts\16_train.py --config configs\experiments\지정파일.json --resume results\training\실험이름\checkpoints\last.pt
+
+10. 이상 발생 시 중단 기준
+-------------------------
+- CUDA available이 False
+- loss가 NaN/Inf 상태로 계속됨
+- 2 epoch 이상 gradient 경고가 반복됨
+- checkpoint가 생성되지 않음
+- GPU 메모리 부족 오류
+

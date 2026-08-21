@@ -1,0 +1,58 @@
+{
+  "checkpoint_epoch": 37,
+  "checkpoint_best_map50_95": 0.2524780012739939,
+  "checkpoint_sha256": "c410e03fe58e362bea131c9b4ad70edb08886a0636f8616412c3a85028b28b36",
+  "calibration_images": 192,
+  "calibration_source": "grouped train; evenly spaced deterministic sample",
+  "verification_source": "grouped valid; 16 evenly spaced deterministic images",
+  "models": [
+    {
+      "file": "results4_fpn48_fp32.onnx",
+      "bytes": 839177,
+      "size_mib": 0.8003015518188477,
+      "external_data_file": "results4_fpn48_fp32.onnx.data",
+      "external_data_bytes": 1331104,
+      "total_bytes": 2170281,
+      "total_size_mib": 2.0697412490844727,
+      "sha256": "d2eb4183ef88e376809b00445d7c0353babdd0a8bf0dd35e834fe4fdf4c68b9c",
+      "onnx_check": "PASS",
+      "runtime_check": "PASS",
+      "max_box_error_px_vs_fp32": 0.0,
+      "max_score_error_vs_fp32": 0.0,
+      "mean_score_mae_vs_fp32": 0.0
+    },
+    {
+      "file": "results4_fpn48_int8_qdq_minmax.onnx",
+      "bytes": 1383911,
+      "size_mib": 1.3198003768920898,
+      "sha256": "8995ba76a676e5e22d8f3f2a5ee5b78eed8c6aa24d3b915cc740558ff8083ddb",
+      "onnx_check": "PASS",
+      "runtime_check": "PASS",
+      "max_box_error_px_vs_fp32": 116.13710021972656,
+      "max_score_error_vs_fp32": 0.2854612469673157,
+      "mean_score_mae_vs_fp32": 0.010152242437470704
+    },
+    {
+      "file": "results4_fpn48_int8_qdq_percentile.onnx",
+      "bytes": 1383926,
+      "size_mib": 1.319814682006836,
+      "sha256": "c05ab8ef98c1a06de61a1b32efef637ace6425e2a39d0840aa59961c09553c67",
+      "onnx_check": "PASS",
+      "runtime_check": "PASS",
+      "max_box_error_px_vs_fp32": 97.04048156738281,
+      "max_score_error_vs_fp32": 0.30934810638427734,
+      "mean_score_mae_vs_fp32": 0.008674188051372766
+    },
+    {
+      "file": "results4_fpn48_int8_qoperator_minmax.onnx",
+      "bytes": 1081075,
+      "size_mib": 1.0309934616088867,
+      "sha256": "631ba46fcc6cfce5f30ed3c0658506566803c62738f01eda02c3a4ea1bb58de1",
+      "onnx_check": "PASS",
+      "runtime_check": "PASS",
+      "max_box_error_px_vs_fp32": 117.84048461914062,
+      "max_score_error_vs_fp32": 0.42873504757881165,
+      "mean_score_mae_vs_fp32": 0.02047412737738341
+    }
+  ]
+}

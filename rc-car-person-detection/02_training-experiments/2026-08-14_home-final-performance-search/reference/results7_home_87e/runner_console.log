@@ -1,0 +1,103 @@
+[2026-08-13T19:04:29] attempt=1 mode=fresh experiment=r2_home_fpn48_lr0750_seed2_100e
+========================================================================
+FULL TRAINING
+========================================================================
+device              : cuda
+torch_version       : 2.3.1
+cuda_build          : 12.1
+cuda_available      : True
+gpu_name            : NVIDIA GeForce MX570 A
+gpu_vram_gib        : 4.0
+compute_capability  : 8.6
+train_images        : 12322
+valid_images        : 1531
+batch_size          : 8
+amp_enabled         : True
+start_epoch         : 1
+epoch   1/100 | train 2.4314 | valid 2.1459 | mAP 0.0105 | best 0.0105 | 1362.3s
+epoch   2/100 | train 1.9827 | valid 1.9838 | mAP 0.0513 | best 0.0513 | 1318.6s
+epoch   3/100 | train 1.8673 | valid 1.8898 | mAP 0.0740 | best 0.0740 | 1282.2s
+epoch   4/100 | train 1.8017 | valid 1.8067 | mAP 0.1182 | best 0.1182 | 981.2s
+epoch   5/100 | train 1.7514 | valid 1.7843 | mAP 0.1358 | best 0.1358 | 854.5s
+epoch   6/100 | train 1.7116 | valid 1.7527 | mAP 0.1320 | best 0.1358 | 830.0s
+epoch   7/100 | train 1.6854 | valid 1.7469 | mAP 0.1439 | best 0.1439 | 844.7s
+epoch   8/100 | train 1.6589 | valid 1.7258 | mAP 0.1517 | best 0.1517 | 923.9s
+epoch   9/100 | train 1.6367 | valid 1.7345 | mAP 0.1519 | best 0.1519 | 914.2s
+epoch  10/100 | train 1.6209 | valid 1.6842 | mAP 0.1640 | best 0.1640 | 842.0s
+epoch  11/100 | train 1.6021 | valid 1.6967 | mAP 0.1586 | best 0.1640 | 841.7s
+epoch  12/100 | train 1.5898 | valid 1.6610 | mAP 0.1763 | best 0.1763 | 848.4s
+epoch  13/100 | train 1.5755 | valid 1.6479 | mAP 0.1937 | best 0.1937 | 717.7s
+epoch  14/100 | train 1.5619 | valid 1.6495 | mAP 0.1877 | best 0.1937 | 984.9s
+epoch  15/100 | train 1.5515 | valid 1.6483 | mAP 0.1891 | best 0.1937 | 993.0s
+epoch  16/100 | train 1.5427 | valid 1.6453 | mAP 0.1911 | best 0.1937 | 969.3s
+epoch  17/100 | train 1.5326 | valid 1.6509 | mAP 0.1866 | best 0.1937 | 966.3s
+epoch  18/100 | train 1.5212 | valid 1.6481 | mAP 0.1831 | best 0.1937 | 957.6s
+epoch  19/100 | train 1.5132 | valid 1.6403 | mAP 0.1954 | best 0.1954 | 990.5s
+epoch  20/100 | train 1.5056 | valid 1.6402 | mAP 0.1965 | best 0.1965 | 965.3s
+epoch  21/100 | train 1.4979 | valid 1.6242 | mAP 0.2034 | best 0.2034 | 964.8s
+epoch  22/100 | train 1.4917 | valid 1.6252 | mAP 0.2020 | best 0.2034 | 958.3s
+epoch  23/100 | train 1.4845 | valid 1.6166 | mAP 0.2097 | best 0.2097 | 968.6s
+epoch  24/100 | train 1.4773 | valid 1.6172 | mAP 0.2050 | best 0.2097 | 958.2s
+epoch  25/100 | train 1.4708 | valid 1.6291 | mAP 0.1993 | best 0.2097 | 958.0s
+epoch  26/100 | train 1.4654 | valid 1.6187 | mAP 0.2173 | best 0.2173 | 974.3s
+epoch  27/100 | train 1.4579 | valid 1.6099 | mAP 0.2168 | best 0.2173 | 963.7s
+epoch  28/100 | train 1.4547 | valid 1.6142 | mAP 0.2115 | best 0.2173 | 963.4s
+epoch  29/100 | train 1.4494 | valid 1.6168 | mAP 0.2084 | best 0.2173 | 968.6s
+epoch  30/100 | train 1.4437 | valid 1.6150 | mAP 0.2144 | best 0.2173 | 968.1s
+epoch  31/100 | train 1.4401 | valid 1.6173 | mAP 0.2131 | best 0.2173 | 958.9s
+epoch  32/100 | train 1.4339 | valid 1.6494 | mAP 0.1928 | best 0.2173 | 957.3s
+epoch  33/100 | train 1.4289 | valid 1.6147 | mAP 0.2176 | best 0.2176 | 952.0s
+epoch  34/100 | train 1.4256 | valid 1.6123 | mAP 0.2214 | best 0.2214 | 953.0s
+epoch  35/100 | train 1.4202 | valid 1.6094 | mAP 0.2219 | best 0.2219 | 951.1s
+epoch  36/100 | train 1.4168 | valid 1.6191 | mAP 0.2152 | best 0.2219 | 938.9s
+epoch  37/100 | train 1.4106 | valid 1.6166 | mAP 0.2098 | best 0.2219 | 952.3s
+epoch  38/100 | train 1.4075 | valid 1.6181 | mAP 0.2155 | best 0.2219 | 966.2s
+epoch  39/100 | train 1.4021 | valid 1.6161 | mAP 0.2160 | best 0.2219 | 1054.9s
+epoch  40/100 | train 1.3998 | valid 1.6201 | mAP 0.2203 | best 0.2219 | 973.8s
+epoch  41/100 | train 1.3940 | valid 1.6093 | mAP 0.2159 | best 0.2219 | 952.9s
+epoch  42/100 | train 1.3919 | valid 1.6181 | mAP 0.2213 | best 0.2219 | 958.7s
+epoch  43/100 | train 1.3869 | valid 1.6168 | mAP 0.2149 | best 0.2219 | 960.0s
+epoch  44/100 | train 1.3834 | valid 1.6153 | mAP 0.2141 | best 0.2219 | 959.2s
+epoch  45/100 | train 1.3815 | valid 1.6078 | mAP 0.2241 | best 0.2241 | 966.6s
+epoch  46/100 | train 1.3755 | valid 1.6220 | mAP 0.2160 | best 0.2241 | 957.6s
+epoch  47/100 | train 1.3752 | valid 1.6109 | mAP 0.2242 | best 0.2242 | 970.8s
+epoch  48/100 | train 1.3701 | valid 1.6205 | mAP 0.2143 | best 0.2242 | 994.8s
+epoch  49/100 | train 1.3662 | valid 1.6153 | mAP 0.2221 | best 0.2242 | 1026.6s
+epoch  50/100 | train 1.3636 | valid 1.6217 | mAP 0.2206 | best 0.2242 | 1201.5s
+epoch  51/100 | train 1.3606 | valid 1.6176 | mAP 0.2187 | best 0.2242 | 1145.1s
+epoch  52/100 | train 1.3565 | valid 1.6168 | mAP 0.2182 | best 0.2242 | 890.5s
+epoch  53/100 | train 1.3541 | valid 1.6167 | mAP 0.2239 | best 0.2242 | 880.0s
+epoch  54/100 | train 1.3520 | valid 1.6288 | mAP 0.2143 | best 0.2242 | 877.3s
+epoch  55/100 | train 1.3486 | valid 1.6212 | mAP 0.2209 | best 0.2242 | 988.9s
+epoch  56/100 | train 1.3459 | valid 1.6248 | mAP 0.2105 | best 0.2242 | 989.4s
+epoch  57/100 | train 1.3421 | valid 1.6244 | mAP 0.2217 | best 0.2242 | 899.3s
+epoch  58/100 | train 1.3412 | valid 1.6295 | mAP 0.2192 | best 0.2242 | 891.1s
+epoch  59/100 | train 1.3390 | valid 1.6265 | mAP 0.2181 | best 0.2242 | 883.8s
+epoch  60/100 | train 1.3365 | valid 1.6223 | mAP 0.2174 | best 0.2242 | 885.8s
+epoch  61/100 | train 1.3308 | valid 1.6317 | mAP 0.2120 | best 0.2242 | 881.5s
+epoch  62/100 | train 1.3320 | valid 1.6297 | mAP 0.2243 | best 0.2243 | 885.1s
+epoch  63/100 | train 1.3273 | valid 1.6382 | mAP 0.2103 | best 0.2243 | 883.6s
+epoch  64/100 | train 1.3253 | valid 1.6358 | mAP 0.2140 | best 0.2243 | 895.1s
+epoch  65/100 | train 1.3253 | valid 1.6297 | mAP 0.2174 | best 0.2243 | 891.6s
+epoch  66/100 | train 1.3222 | valid 1.6326 | mAP 0.2132 | best 0.2243 | 895.0s
+epoch  67/100 | train 1.3211 | valid 1.6374 | mAP 0.2108 | best 0.2243 | 892.1s
+epoch  68/100 | train 1.3172 | valid 1.6366 | mAP 0.2165 | best 0.2243 | 908.4s
+epoch  69/100 | train 1.3155 | valid 1.6383 | mAP 0.2143 | best 0.2243 | 892.8s
+epoch  70/100 | train 1.3137 | valid 1.6471 | mAP 0.2111 | best 0.2243 | 889.4s
+epoch  71/100 | train 1.3116 | valid 1.6433 | mAP 0.2115 | best 0.2243 | 893.7s
+epoch  72/100 | train 1.3101 | valid 1.6474 | mAP 0.2112 | best 0.2243 | 904.1s
+epoch  73/100 | train 1.3074 | valid 1.6452 | mAP 0.2116 | best 0.2243 | 889.2s
+epoch  74/100 | train 1.3062 | valid 1.6428 | mAP 0.2171 | best 0.2243 | 891.0s
+epoch  75/100 | train 1.3043 | valid 1.6496 | mAP 0.2122 | best 0.2243 | 899.7s
+epoch  76/100 | train 1.3008 | valid 1.6458 | mAP 0.2117 | best 0.2243 | 922.2s
+epoch  77/100 | train 1.3008 | valid 1.6499 | mAP 0.2115 | best 0.2243 | 891.9s
+epoch  78/100 | train 1.2994 | valid 1.6549 | mAP 0.2087 | best 0.2243 | 896.9s
+epoch  79/100 | train 1.2998 | valid 1.6496 | mAP 0.2117 | best 0.2243 | 898.2s
+epoch  80/100 | train 1.2972 | valid 1.6496 | mAP 0.2093 | best 0.2243 | 902.3s
+epoch  81/100 | train 1.2967 | valid 1.6537 | mAP 0.2086 | best 0.2243 | 898.3s
+epoch  82/100 | train 1.2939 | valid 1.6529 | mAP 0.2108 | best 0.2243 | 892.6s
+epoch  83/100 | train 1.2924 | valid 1.6545 | mAP 0.2090 | best 0.2243 | 895.9s
+epoch  84/100 | train 1.2917 | valid 1.6520 | mAP 0.2120 | best 0.2243 | 899.0s
+epoch  85/100 | train 1.2908 | valid 1.6589 | mAP 0.2081 | best 0.2243 | 893.4s
+epoch  86/100 | train 1.2907 | valid 1.6569 | mAP 0.2059 | best 0.2243 | 900.7s
+epoch  87/100 | train 1.2890 | valid 1.6476 | mAP 0.2086 | best 0.2243 | 892.4s

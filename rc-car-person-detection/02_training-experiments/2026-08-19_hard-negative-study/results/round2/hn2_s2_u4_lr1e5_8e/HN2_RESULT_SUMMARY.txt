@@ -1,0 +1,18 @@
+﻿HN2 RESULT SUMMARY
+========================================================================
+model: S2
+baseline validation: mAP=0.258142, P=0.605847, R=0.546356, F1=0.574565
+baseline HN eval60: fp_images=20, fp_boxes=28, max_score=0.489014
+
+EPOCHS
+e1: mAP=0.253913 P=0.599369 R=0.550951 F1=0.574141 | FPimg=19 FPbox=23 max=0.524902 | candidate=False strong=False
+e2: mAP=0.253688 P=0.595319 R=0.551596 F1=0.572624 | FPimg=19 FPbox=23 max=0.517090 | candidate=False strong=False
+e3: mAP=0.256609 P=0.603176 R=0.551193 F1=0.576014 | FPimg=19 FPbox=22 max=0.504883 | candidate=False strong=False
+e4: mAP=0.255242 P=0.607197 R=0.549581 F1=0.576954 | FPimg=17 FPbox=21 max=0.502441 | candidate=False strong=False
+e5: mAP=0.254140 P=0.592375 R=0.552402 F1=0.571691 | FPimg=18 FPbox=24 max=0.504883 | candidate=False strong=False
+e6: mAP=0.253940 P=0.592240 R=0.551274 F1=0.571023 | FPimg=18 FPbox=22 max=0.515137 | candidate=False strong=False
+e7: mAP=0.255527 P=0.605347 R=0.553128 F1=0.578060 | FPimg=17 FPbox=20 max=0.502930 | candidate=False strong=False
+e8: mAP=0.254585 P=0.580634 R=0.560787 F1=0.570538 | FPimg=19 FPbox=22 max=0.505371 | candidate=False strong=False
+
+AUTO CANDIDATE: NONE
+No HN2 epoch passes the pre-fixed retention/FP gates. Keep the original checkpoint for deployment comparison.

@@ -1,0 +1,15 @@
+﻿HARD NEGATIVE RESULT SUMMARY
+============================================================
+
+epoch 2: mAP50:95=0.292273, P=0.890306, R=0.365769, F1=0.518514, valid_total=1.565770
+epoch 3: mAP50:95=0.294146, P=0.901173, R=0.346985, F1=0.501048, valid_total=1.569324
+epoch 5: mAP50:95=0.293954, P=0.894904, R=0.362464, F1=0.515951, valid_total=1.566163
+
+NEGATIVE EVAL (threshold 0.25)
+before_summary: images_with_fp=2, total_fp=2, max_score=0.273926
+best_summary: images_with_fp=3, total_fp=3, max_score=0.301025
+e2_summary: images_with_fp=2, total_fp=2, max_score=0.296631
+e3_summary: images_with_fp=2, total_fp=2, max_score=0.285156
+e5_summary: images_with_fp=3, total_fp=3, max_score=0.298340
+
+판정은 e2/e3/e5 중 원본 validation 성능을 최대한 유지하면서 negative FP가 가장 많이 줄어든 checkpoint를 우선한다.

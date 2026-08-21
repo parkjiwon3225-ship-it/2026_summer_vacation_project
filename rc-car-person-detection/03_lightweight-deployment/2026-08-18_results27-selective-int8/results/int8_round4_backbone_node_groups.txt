@@ -1,0 +1,39 @@
+[q1_early_only] 8 nodes
+/model/backbone/stem/stem.0/Conv
+/model/backbone/stage1/stage1.0/expand/expand.0/Conv
+/model/backbone/stage1/stage1.0/depthwise/depthwise.0/Conv
+/model/backbone/stage1/stage1.0/project/project.0/Conv
+/model/backbone/stage1/stage1.1/expand/expand.0/Conv
+/model/backbone/stage1/stage1.1/depthwise/depthwise.0/Conv
+/model/backbone/stage1/stage1.1/project/project.0/Conv
+/model/backbone/stage2/stage2.0/expand/expand.0/Conv
+
+[q2_only] 8 nodes
+/model/backbone/stage2/stage2.0/depthwise/depthwise.0/Conv
+/model/backbone/stage2/stage2.0/project/project.0/Conv
+/model/backbone/stage2/stage2.1/expand/expand.0/Conv
+/model/backbone/stage2/stage2.1/depthwise/depthwise.0/Conv
+/model/backbone/stage2/stage2.1/project/project.0/Conv
+/model/backbone/stage2/stage2.2/expand/expand.0/Conv
+/model/backbone/stage2/stage2.2/depthwise/depthwise.0/Conv
+/model/backbone/stage2/stage2.2/project/project.0/Conv
+
+[q3_only] 7 nodes
+/model/backbone/stage3/stage3.0/expand/expand.0/Conv
+/model/backbone/stage3/stage3.0/depthwise/depthwise.0/Conv
+/model/backbone/stage3/stage3.0/project/project.0/Conv
+/model/backbone/stage3/stage3.1/expand/expand.0/Conv
+/model/backbone/stage3/stage3.1/depthwise/depthwise.0/Conv
+/model/backbone/stage3/stage3.1/project/project.0/Conv
+/model/backbone/stage3/stage3.2/expand/expand.0/Conv
+
+[q4_late_only] 8 nodes
+/model/backbone/stage3/stage3.2/depthwise/depthwise.0/Conv
+/model/backbone/stage3/stage3.2/project/project.0/Conv
+/model/backbone/stage4/stage4.0/expand/expand.0/Conv
+/model/backbone/stage4/stage4.0/depthwise/depthwise.0/Conv
+/model/backbone/stage4/stage4.0/project/project.0/Conv
+/model/backbone/stage4/stage4.1/expand/expand.0/Conv
+/model/backbone/stage4/stage4.1/depthwise/depthwise.0/Conv
+/model/backbone/stage4/stage4.1/project/project.0/Conv
+

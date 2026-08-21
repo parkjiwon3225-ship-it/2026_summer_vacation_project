@@ -1,0 +1,14 @@
+{
+  "common_overrides": {
+    "epochs": 80
+  },
+  "experiments": [
+    {
+      "name": "REPLACE_AFTER_ROUND1_ANALYSIS",
+      "base_config": "configs/experiments/home_baseline_100e.json",
+      "overrides": {
+        "seed": 20260813
+      }
+    }
+  ]
+}

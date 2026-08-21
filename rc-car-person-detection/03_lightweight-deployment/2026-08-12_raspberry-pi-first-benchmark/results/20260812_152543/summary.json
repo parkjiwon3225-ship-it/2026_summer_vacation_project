@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "stop_reason": "user_pressed_q",
+  "error": null,
+  "notice": "Temporary INT8 model; visual test is not ground-truth accuracy evaluation.",
+  "started": "20260812_152543",
+  "elapsed_seconds": 77.32671414000015,
+  "frames": 699,
+  "frames_with_people": 548,
+  "frames_with_people_percent": 78.39771101573676,
+  "total_detections": 2001,
+  "detections_per_frame": 2.8626609442060085,
+  "confidence": {
+    "mean": 0.32641662672899296,
+    "median": 0.33097806572914124,
+    "p95": 0.4498997628688812,
+    "min": 0.2019716501235962,
+    "max": 0.6690219640731812
+  },
+  "box_height_model_pixels": {
+    "mean": 43.35214302432293,
+    "median": 20.34179985523224,
+    "p95": 134.01110172271729,
+    "min": 11.344149351119995,
+    "max": 213.29396724700928
+  },
+  "size_counts": {
+    "tiny_lt16": 14,
+    "small_16_32": 1285,
+    "regular_ge32": 702
+  },
+  "scenario_summary": {
+    "empty": {
+      "frames": 183,
+      "frames_with_detections": 153,
+      "detections": 878,
+      "mean_inference_ms": 89.90095662842269
+    },
+    "far": {
+      "frames": 210,
+      "frames_with_detections": 154,
+      "detections": 760,
+      "mean_inference_ms": 89.88440512856911
+    },
+    "middle": {
+      "frames": 103,
+      "frames_with_detections": 89,
+      "detections": 137,
+      "mean_inference_ms": 89.96043954372458
+    },
+    "moving": {
+      "frames": 9,
+      "frames_with_detections": 9,
+      "detections": 23,
+      "mean_inference_ms": 89.99571700001576
+    },
+    "multiple_people": {
+      "frames": 46,
+      "frames_with_detections": 25,
+      "detections": 55,
+      "mean_inference_ms": 89.8526943912815
+    },
+    "near": {
+      "frames": 124,
+      "frames_with_detections": 94,
+      "detections": 124,
+      "mean_inference_ms": 89.77809496778836
+    },
+    "unlabeled": {
+      "frames": 24,
+      "frames_with_detections": 24,
+      "detections": 24,
+      "mean_inference_ms": 92.01139762497708
+    }
+  },
+  "inference_ms": {
+    "mean": 89.95345940916852,
+    "median": 89.12169700033701,
+    "p95": 93.9899466994575,
+    "min": 87.53031500054931,
+    "max": 120.42634800036467
+  },
+  "total_ms": {
+    "mean": 96.89075822030418,
+    "median": 96.36819699971966,
+    "p95": 101.86404349969962,
+    "min": 93.03425599955517,
+    "max": 131.26677900072536
+  },
+  "sensor_to_result_ms": {
+    "mean": 137.3776791888412,
+    "median": 137.298672,
+    "p95": 155.7965531,
+    "min": 114.551479,
+    "max": 165.340564
+  },
+  "temperature_c": {
+    "mean": 63.14899427753935,
+    "median": 63.783,
+    "p95": 67.679,
+    "min": 52.582,
+    "max": 68.653
+  },
+  "start_temperature_c": 52.582,
+  "end_temperature_c": 64.757,
+  "throttled_start": "throttled=0x0",
+  "throttled_end": "throttled=0x0",
+  "configuration": {
+    "duration": 180.0,
+    "threshold": 0.2,
+    "nms": 0.2,
+    "threads": 2,
+    "warmup": 20,
+    "max_temperature": 75.0,
+    "no_preview": false,
+    "output": "pi_int8_camera_results"
+  }
+}

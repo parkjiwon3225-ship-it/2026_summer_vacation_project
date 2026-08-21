@@ -1,0 +1,16 @@
+{
+  "experiment_name": "longrun_s5_stage2_final320_seed11",
+  "stop_reason": "epochs_complete",
+  "last_completed_epoch": 200,
+  "requested_epochs": 200,
+  "image_width": 320,
+  "image_height": 240,
+  "elapsed_hours": 30.028059204972216,
+  "best_map50_95": 0.2316693184315227,
+  "initialization": {
+    "mode": "weights_only",
+    "path": "C:\\Users\\USER\\Desktop\\RC\\RC\\results\\training\\longrun_s5_stage1_640_seed11\\checkpoints\\best.pt",
+    "source_epoch": 52,
+    "source_experiment": "longrun_s5_stage1_640_seed11"
+  }
+}

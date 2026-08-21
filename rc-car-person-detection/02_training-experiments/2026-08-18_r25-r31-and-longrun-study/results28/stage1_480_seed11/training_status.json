@@ -1,0 +1,13 @@
+{
+  "experiment_name": "longrun_s4_stage1_480_seed11",
+  "stop_reason": "epochs_complete",
+  "last_completed_epoch": 200,
+  "requested_epochs": 200,
+  "image_width": 480,
+  "image_height": 360,
+  "elapsed_hours": 31.781382885916674,
+  "best_map50_95": 0.24406881292816252,
+  "initialization": {
+    "mode": "fresh"
+  }
+}

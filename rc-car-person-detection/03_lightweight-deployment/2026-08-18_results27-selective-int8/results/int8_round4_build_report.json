@@ -1,0 +1,55 @@
+{
+  "backbone_conv_count": 31,
+  "quarter_sizes": [
+    8,
+    8,
+    7,
+    8
+  ],
+  "calibration_samples": 96,
+  "percentile": 99.99,
+  "variants": [
+    {
+      "tag": "q1_early_only",
+      "status": "PASS",
+      "nodes": 8,
+      "size_mb": 1.3739471435546875,
+      "quant_sec": 131.48698280000826
+    },
+    {
+      "tag": "q2_only",
+      "status": "PASS",
+      "nodes": 8,
+      "size_mb": 1.330277442932129,
+      "quant_sec": 194.2012464000145
+    },
+    {
+      "tag": "q3_only",
+      "status": "PASS",
+      "nodes": 7,
+      "size_mb": 1.1928348541259766,
+      "quant_sec": 190.3582369000651
+    },
+    {
+      "tag": "q4_late_only",
+      "status": "PASS",
+      "nodes": 8,
+      "size_mb": 0.9044561386108398,
+      "quant_sec": 193.10961399995722
+    },
+    {
+      "tag": "q1_q2_prefix50",
+      "status": "PASS",
+      "nodes": 16,
+      "size_mb": 1.3357372283935547,
+      "quant_sec": 192.9416903000092
+    },
+    {
+      "tag": "q3_q4_suffix50",
+      "status": "PASS",
+      "nodes": 15,
+      "size_mb": 0.7288036346435547,
+      "quant_sec": 197.44609640003182
+    }
+  ]
+}

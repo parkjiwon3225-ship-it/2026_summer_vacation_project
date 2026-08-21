@@ -1,0 +1,35 @@
+{
+  "backbone_conv_count": 31,
+  "quarter_sizes": [
+    8,
+    8,
+    7,
+    8
+  ],
+  "calibration_samples": 128,
+  "percentile": 99.99,
+  "q1_policy": "FP32 only (Round 4 sensitivity failure)",
+  "variants": [
+    {
+      "tag": "q2_q3",
+      "status": "PASS",
+      "nodes": 15,
+      "size_mb": 1.1546249389648438,
+      "quant_sec": 217.32421710004564
+    },
+    {
+      "tag": "q2_q4",
+      "status": "PASS",
+      "nodes": 16,
+      "size_mb": 0.8662290573120117,
+      "quant_sec": 222.25859920005314
+    },
+    {
+      "tag": "q2_q3_q4",
+      "status": "PASS",
+      "nodes": 23,
+      "size_mb": 0.6905851364135742,
+      "quant_sec": 166.63898279995192
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+RESULTS.4 FPN48 RASPBERRY PI 3-MODEL TEST CHECKLIST
+
+[설치/검증]
+1. cd ~/Desktop/RC_RESULTS4_PI_VARIANTS
+2. chmod +x 01_setup_pi.sh 02_test_one_model.sh 03_run_three_models.sh
+3. ./01_setup_pi.sh
+4. .venv/bin/python 04_check_models.py
+5. 모델 3개 모두 PASS 확인
+
+[공통 조건]
+- threshold 0.25
+- NMS 0.50
+- threads 2
+- 각 모델 동일 장소/조명/사람 거리
+- 시작 온도 기록, 모델 사이 냉각
+
+[실행]
+./02_test_one_model.sh models/results4_fpn48_fp32.onnx 180
+./02_test_one_model.sh models/results4_fpn48_int8_qdq_percentile.onnx 180
+./02_test_one_model.sh models/results4_fpn48_int8_qdq_minmax.onnx 180
+
+[장면]
+- 빈 배경
+- 가까운 사람
+- 중간 거리
+- 먼 사람
+- 움직이는 사람
+- 화면 경계/부분 인물
+
+[확인]
+- 박스 위치 및 중복 박스
+- 빈 배경 오검출
+- 평균/P95 inference
+- 평균/P95 sensor-to-result
+- 최대 온도/throttling
+- 색상 정상 여부
+
+[회수]
+pi_variant_results 폴더 전체를 USB로 복사

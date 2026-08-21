@@ -1,0 +1,82 @@
+{
+  "status": "THERMAL_STOP",
+  "stop_reason": "temperature_reached_78.4C",
+  "error": null,
+  "notice": "Temporary INT8 model; visual test is not ground-truth accuracy evaluation.",
+  "started": "20260812_150847",
+  "elapsed_seconds": 33.64531204700006,
+  "frames": 387,
+  "frames_with_people": 385,
+  "frames_with_people_percent": 99.48320413436693,
+  "total_detections": 674,
+  "detections_per_frame": 1.7416020671834624,
+  "confidence": {
+    "mean": 0.4285832673355451,
+    "median": 0.43337342143058777,
+    "p95": 0.5830061435699463,
+    "min": 0.2019716501235962,
+    "max": 0.6309283971786499
+  },
+  "box_height_model_pixels": {
+    "mean": 113.99094170323112,
+    "median": 112.54471898078918,
+    "p95": 158.77431392669678,
+    "min": 11.208546459674835,
+    "max": 195.29967784881592
+  },
+  "size_counts": {
+    "tiny_lt16": 4,
+    "small_16_32": 2,
+    "regular_ge32": 668
+  },
+  "scenario_summary": {
+    "unlabeled": {
+      "frames": 387,
+      "frames_with_detections": 385,
+      "detections": 674,
+      "mean_inference_ms": 60.990096457354724
+    }
+  },
+  "inference_ms": {
+    "mean": 60.990096457354724,
+    "median": 58.83541899993361,
+    "p95": 77.65160400012974,
+    "min": 48.9026529999137,
+    "max": 111.54319799970835
+  },
+  "total_ms": {
+    "mean": 70.08539141083777,
+    "median": 69.09391900035189,
+    "p95": 86.98618209996312,
+    "min": 54.48612800000774,
+    "max": 123.74609900007272
+  },
+  "sensor_to_result_ms": {
+    "mean": 110.36448747028423,
+    "median": 110.229045,
+    "p95": 134.6562025,
+    "min": 74.915416,
+    "max": 165.332237
+  },
+  "temperature_c": {
+    "mean": 71.85562273901809,
+    "median": 73.036,
+    "p95": 76.932,
+    "min": 58.426,
+    "max": 78.393
+  },
+  "start_temperature_c": 59.887,
+  "end_temperature_c": 73.523,
+  "throttled_start": "throttled=0x0",
+  "throttled_end": "throttled=0x0",
+  "configuration": {
+    "duration": 600.0,
+    "threshold": 0.2,
+    "nms": 0.2,
+    "threads": 4,
+    "warmup": 20,
+    "max_temperature": 78.0,
+    "no_preview": false,
+    "output": "pi_int8_camera_results"
+  }
+}

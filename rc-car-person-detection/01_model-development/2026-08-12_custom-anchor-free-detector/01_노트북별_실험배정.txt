@@ -1,0 +1,66 @@
+RC-CAR PERSON DETECTOR - 학교 노트북 5대 실험 배정 (100 epoch)
+==============================================================
+
+[공통 원칙]
+- 집 노트북의 home_baseline_100e가 기준 모델이다.
+- 학교 5대는 기준값에서 한 가지 핵심 요소만 바꾼다.
+- 모든 실험은 같은 seed, 같은 데이터, 같은 100 epoch를 사용한다.
+- Train/Valid만 사용하며 Test는 최종 모델 선택 뒤 한 번만 사용한다.
+- 각 명령은 Anaconda Prompt에서 rc_person_detector 폴더로 이동한 뒤 실행한다.
+
+[현장 공통 준비]
+1. 프로젝트 폴더 복사 또는 압축 해제
+2. Anaconda Prompt 실행
+3. 프로젝트 폴더로 이동
+4. conda activate rc-person-detector
+5. python -m pip install -e .
+6. 00_verify_school_setup.bat
+7. PASS 확인 후 아래에서 해당 노트북 명령 한 줄 실행
+
+[학교 노트북 1: 낮은 학습률]
+목적: 기준 학습률이 너무 커서 최적점을 지나치는지 확인
+python scripts\16_train.py --config configs\experiments\school1_low_lr_100e.json
+
+[학교 노트북 2: 경량 모델]
+목적: 정확도를 크게 잃지 않으면서 RC카 추론 속도와 모델 크기를 개선할 수 있는지 확인
+python scripts\16_train.py --config configs\experiments\school2_lightweight_100e.json
+
+[학교 노트북 3: 용량 증가 모델]
+목적: 현재 모델 용량 부족이 정확도의 제한인지 확인
+python scripts\16_train.py --config configs\experiments\school3_capacity_100e.json
+
+[학교 노트북 4: 박스 손실 강화]
+목적: 사람 위치와 박스 정밀도를 더 강하게 학습했을 때 mAP가 개선되는지 확인
+python scripts\16_train.py --config configs\experiments\school4_box_weight_100e.json
+
+[학교 노트북 5: 작은 사람 양성 영역 확대]
+목적: 작은 사람에 배정되는 양성 위치를 늘려 Tiny/Small recall이 개선되는지 확인
+python scripts\16_train.py --config configs\experiments\school5_center_radius_100e.json
+
+[다음 날 회수할 폴더]
+각 노트북의 아래 폴더 전체를 USB에 복사한다.
+results\training\school1_low_lr_100e
+results\training\school2_lightweight_100e
+results\training\school3_capacity_100e
+results\training\school4_box_weight_100e
+results\training\school5_center_radius_100e
+
+특히 반드시 있어야 하는 파일:
+- history.csv
+- warnings.log
+- device.json
+- checkpoints\best.pt
+- checkpoints\last.pt
+
+[비교 우선순위]
+1. metric_tiny_lt16_recall, metric_small_16_32_recall
+2. metric_map50_95
+3. metric_recall, metric_f1
+4. metric_precision
+5. epoch 시간, 처리 속도, VRAM, 모델 크기
+
+[중요]
+- 창을 닫지 않는다.
+- 전원 연결, Windows 절전 안 함으로 설정한다.
+- 다음 날 아직 실행 중이면 강제 종료하지 말고 마지막 epoch 종료를 기다리거나 Ctrl+C 한 번만 누른다.
+- 매 epoch last.pt가 저장되므로 중간 결과도 회수할 수 있다.

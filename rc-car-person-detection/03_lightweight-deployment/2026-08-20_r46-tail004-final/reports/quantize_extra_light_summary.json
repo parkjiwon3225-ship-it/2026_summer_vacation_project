@@ -1,0 +1,159 @@
+{
+  "backbone_conv_count": 31,
+  "quarter_sizes": [
+    8,
+    8,
+    7,
+    8
+  ],
+  "variants": {
+    "q3q4": {
+      "variant": "q3q4",
+      "calibration_samples": 96,
+      "percentile": 99.99,
+      "quantized_nodes": 15,
+      "size_mb": 0.7287282943725586,
+      "quant_sec": 65.38647910000145,
+      "input_shape": [
+        1,
+        3,
+        336,
+        448
+      ],
+      "output_shapes": [
+        [
+          1,
+          12502,
+          4
+        ],
+        [
+          1,
+          12502
+        ]
+      ],
+      "op_counts": {
+        "Constant": 116,
+        "Exp": 4,
+        "Conv": 87,
+        "DequantizeLinear": 60,
+        "Identity": 48,
+        "Expand": 8,
+        "Sigmoid": 79,
+        "Reshape": 32,
+        "Mul": 89,
+        "Add": 23,
+        "QuantizeLinear": 30,
+        "Shape": 18,
+        "Slice": 3,
+        "Concat": 27,
+        "Resize": 3,
+        "Gather": 33,
+        "Softplus": 4,
+        "Transpose": 4,
+        "Sub": 8,
+        "Unsqueeze": 25,
+        "Cast": 6,
+        "Range": 6
+      }
+    },
+    "q2tail4_q3q4": {
+      "variant": "q2tail4_q3q4",
+      "calibration_samples": 96,
+      "percentile": 99.99,
+      "quantized_nodes": 19,
+      "size_mb": 0.7003402709960938,
+      "quant_sec": 48.82819970000128,
+      "input_shape": [
+        1,
+        3,
+        336,
+        448
+      ],
+      "output_shapes": [
+        [
+          1,
+          12502,
+          4
+        ],
+        [
+          1,
+          12502
+        ]
+      ],
+      "op_counts": {
+        "Constant": 116,
+        "Exp": 4,
+        "Conv": 87,
+        "DequantizeLinear": 76,
+        "Identity": 48,
+        "Expand": 8,
+        "Sigmoid": 79,
+        "Reshape": 32,
+        "Mul": 89,
+        "Add": 23,
+        "QuantizeLinear": 38,
+        "Shape": 18,
+        "Slice": 3,
+        "Concat": 27,
+        "Resize": 3,
+        "Gather": 33,
+        "Softplus": 4,
+        "Transpose": 4,
+        "Sub": 8,
+        "Unsqueeze": 25,
+        "Cast": 6,
+        "Range": 6
+      }
+    },
+    "q2tail6_q3q4": {
+      "variant": "q2tail6_q3q4",
+      "calibration_samples": 96,
+      "percentile": 99.99,
+      "quantized_nodes": 21,
+      "size_mb": 0.6920833587646484,
+      "quant_sec": 54.77647269999943,
+      "input_shape": [
+        1,
+        3,
+        336,
+        448
+      ],
+      "output_shapes": [
+        [
+          1,
+          12502,
+          4
+        ],
+        [
+          1,
+          12502
+        ]
+      ],
+      "op_counts": {
+        "Constant": 116,
+        "Exp": 4,
+        "Conv": 87,
+        "DequantizeLinear": 84,
+        "Identity": 48,
+        "Expand": 8,
+        "Sigmoid": 79,
+        "Reshape": 32,
+        "Mul": 89,
+        "Add": 23,
+        "QuantizeLinear": 42,
+        "Shape": 18,
+        "Slice": 3,
+        "Concat": 27,
+        "Resize": 3,
+        "Gather": 33,
+        "Softplus": 4,
+        "Transpose": 4,
+        "Sub": 8,
+        "Unsqueeze": 25,
+        "Cast": 6,
+        "Range": 6
+      }
+    }
+  },
+  "intent": "Q3+Q4 is the known-good control. Tail4 and Tail6 extend INT8 into the latter part of Q2 without touching Q1, FPN, or detection head."
+}

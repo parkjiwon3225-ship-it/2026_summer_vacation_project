@@ -1,0 +1,48 @@
+[2026-08-14T11:00:27] attempt=1 mode=fresh experiment=r3_school1_fpn48_exp200_seed11
+========================================================================
+FULL TRAINING
+========================================================================
+device              : cuda
+torch_version       : 2.3.1
+cuda_build          : 12.1
+cuda_available      : True
+gpu_name            : NVIDIA GeForce MX570 A
+gpu_vram_gib        : 4.0
+compute_capability  : 8.6
+train_images        : 12322
+valid_images        : 1531
+batch_size          : 8
+amp_enabled         : True
+start_epoch         : 1
+epoch   1/100 | train 2.3770 | valid 2.2742 | mAP 0.0073 | best 0.0073 | 517.5s
+epoch   2/100 | train 1.9669 | valid 2.0758 | mAP 0.0282 | best 0.0282 | 514.5s
+epoch   3/100 | train 1.8572 | valid 1.9966 | mAP 0.0740 | best 0.0740 | 515.2s
+epoch   4/100 | train 1.7884 | valid 2.0846 | mAP 0.0883 | best 0.0883 | 511.4s
+epoch   5/100 | train 1.7358 | valid 1.9101 | mAP 0.0909 | best 0.0909 | 509.4s
+epoch   6/100 | train 1.6940 | valid 2.0060 | mAP 0.1265 | best 0.1265 | 513.8s
+epoch   7/100 | train 1.6641 | valid 1.8840 | mAP 0.1410 | best 0.1410 | 525.9s
+epoch   8/100 | train 1.6401 | valid 1.9106 | mAP 0.1453 | best 0.1453 | 519.2s
+epoch   9/100 | train 1.6186 | valid 1.8003 | mAP 0.1745 | best 0.1745 | 515.9s
+epoch  10/100 | train 1.5991 | valid 1.7975 | mAP 0.1644 | best 0.1745 | 523.6s
+epoch  11/100 | train 1.5811 | valid 1.7269 | mAP 0.1689 | best 0.1745 | 520.7s
+epoch  12/100 | train 1.5697 | valid 1.7368 | mAP 0.1797 | best 0.1797 | 520.7s
+epoch  13/100 | train 1.5541 | valid 1.6892 | mAP 0.1892 | best 0.1892 | 529.5s
+epoch  14/100 | train 1.5424 | valid 1.6638 | mAP 0.2111 | best 0.2111 | 525.8s
+epoch  15/100 | train 1.5330 | valid 1.6517 | mAP 0.2066 | best 0.2111 | 514.0s
+epoch  16/100 | train 1.5207 | valid 1.6424 | mAP 0.2087 | best 0.2111 | 518.3s
+epoch  17/100 | train 1.5141 | valid 1.6551 | mAP 0.2078 | best 0.2111 | 518.4s
+epoch  18/100 | train 1.5029 | valid 1.6294 | mAP 0.2233 | best 0.2233 | 516.7s
+epoch  19/100 | train 1.4963 | valid 1.6210 | mAP 0.2207 | best 0.2233 | 511.7s
+epoch  20/100 | train 1.4867 | valid 1.6175 | mAP 0.2446 | best 0.2446 | 520.4s
+epoch  21/100 | train 1.4793 | valid 1.6092 | mAP 0.2355 | best 0.2446 | 524.2s
+epoch  22/100 | train 1.4720 | valid 1.6057 | mAP 0.2421 | best 0.2446 | 521.8s
+epoch  23/100 | train 1.4675 | valid 1.6098 | mAP 0.2378 | best 0.2446 | 513.8s
+epoch  24/100 | train 1.4555 | valid 1.6099 | mAP 0.2347 | best 0.2446 | 514.6s
+epoch  25/100 | train 1.4516 | valid 1.5943 | mAP 0.2504 | best 0.2504 | 519.9s
+epoch  26/100 | train 1.4470 | valid 1.6121 | mAP 0.2445 | best 0.2504 | 520.7s
+epoch  27/100 | train 1.4408 | valid 1.6112 | mAP 0.2399 | best 0.2504 | 514.2s
+epoch  28/100 | train 1.4366 | valid 1.6236 | mAP 0.2493 | best 0.2504 | 513.4s
+epoch  29/100 | train 1.4303 | valid 1.6074 | mAP 0.2532 | best 0.2532 | 512.6s
+epoch  30/100 | train 1.4269 | valid 1.6418 | mAP 0.2350 | best 0.2532 | 509.4s
+
+User interrupted training. The last COMPLETED epoch remains saved; automatic retry is disabled.

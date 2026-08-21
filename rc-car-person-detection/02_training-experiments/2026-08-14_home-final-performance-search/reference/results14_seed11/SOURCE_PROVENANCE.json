@@ -1,0 +1,19 @@
+{
+  "source_archive": "results.14.zip (local experiment archive; not committed)",
+  "source_experiment": "r3_school1_fpn48_exp200_seed11",
+  "selection_split": "valid",
+  "test_split_used": false,
+  "best_epoch": 29,
+  "last_epoch": 30,
+  "best_map50_95": 0.253237785,
+  "best_ap50": 0.550494,
+  "best_ap75": 0.201683,
+  "best_precision": 0.673189,
+  "best_recall": 0.510319,
+  "best_f1_at_0_25": 0.580548,
+  "best_tiny_recall": 0.073853,
+  "best_small_recall": 0.453307,
+  "best_checkpoint_sha256": "D44DB15BCB623EDE678C48150CE7EF6965F871FA0D3DF80D8BEC2E900F8FF27A",
+  "last_checkpoint_sha256": "1E4633F06FE33E91F069DDF1E8BF9EBFE2487A75561EBC764BD854345A9B12FA",
+  "note": "best.pt is immutable source champion; last.pt is used only for exact optimizer/scheduler resume to epoch 100."
+}

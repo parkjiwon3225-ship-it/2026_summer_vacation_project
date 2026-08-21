@@ -1,0 +1,4 @@
+f719d2b958ad95d7baebf2e19cb26f323de304273a25c0952f2f1b16f6654a49  models/2026-08-07_teacher-code-v2_int8.onnx
+76e05349827fc5aab88759dd3d0a5713f3bd7b070c239238e0cada38957f6d0c  models/2026-08-12_preliminary-integration_int8.onnx
+8995ba76a676e5e22d8f3f2a5ee5b78eed8c6aa24d3b915cc740558ff8083ddb  models/2026-08-13_results4-fpn48_qdq-minmax_int8.onnx
+c05ab8ef98c1a06de61a1b32efef637ace6425e2a39d0840aa59961c09553c67  models/2026-08-13_results4-fpn48_qdq-percentile_int8.onnx

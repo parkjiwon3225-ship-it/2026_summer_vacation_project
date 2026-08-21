@@ -1,0 +1,12 @@
+{
+  "source_zip": "results.27.zip",
+  "experiment": "longrun_s5_stage1_640_seed11",
+  "best_epoch": 52,
+  "best_map50_95": 0.2880503188818693,
+  "input_width": 640,
+  "input_height": 480,
+  "fpn_channels": 48,
+  "backbone_expansion": 2.0,
+  "source_checkpoint_sha256": "328104ce44239fc60bc73533c08bab557cae31586454cd50d840c52117385a9e",
+  "source_checkpoint_size": 4168168
+}

@@ -1,0 +1,13 @@
+{
+  "experiment_name": "longrun_s1_320_seed11_200e",
+  "stop_reason": "epochs_complete",
+  "last_completed_epoch": 200,
+  "requested_epochs": 200,
+  "image_width": 320,
+  "image_height": 240,
+  "elapsed_hours": 27.39360335436111,
+  "best_map50_95": 0.24861452970653772,
+  "initialization": {
+    "mode": "fresh"
+  }
+}

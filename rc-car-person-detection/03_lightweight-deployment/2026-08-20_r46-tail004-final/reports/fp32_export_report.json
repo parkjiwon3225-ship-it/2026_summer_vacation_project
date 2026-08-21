@@ -1,0 +1,29 @@
+{
+  "checkpoint": "../../../02_training-experiments/2026-08-20_final-resolution-search/runs/r46_final448_seed15_100e/best.pt",
+  "epoch": 25,
+  "best_map50_95": 0.2618320342618972,
+  "fpn_channels": 48,
+  "backbone_expansion": 2.0,
+  "input": [
+    1,
+    3,
+    336,
+    448
+  ],
+  "boxes": [
+    1,
+    12502,
+    4
+  ],
+  "scores": [
+    1,
+    12502
+  ],
+  "size_mb": 1.3276290893554688,
+  "equivalence": {
+    "score_max_abs_diff": 5.662441253662109e-07,
+    "score_mean_abs_diff": 1.5375474819260642e-08,
+    "box_max_abs_diff": 0.000152587890625,
+    "box_mean_abs_diff": 4.301390617911238e-06
+  }
+}

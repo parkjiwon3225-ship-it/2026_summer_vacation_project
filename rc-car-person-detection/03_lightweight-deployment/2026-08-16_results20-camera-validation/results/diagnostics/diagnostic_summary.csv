@@ -1,0 +1,4 @@
+﻿model,infer_mean_ms,infer_p50_ms,infer_p95_ms,infer_p99_ms,total_mean_ms,fps,mean_max_score,mean_detections,frames,scene,threads,conf,nms
+fp32,4.81,4.634,6.017,7.238,5.479,182.53,0.3106,1.08,300,person_present_rerun_2026-08-16,2,0.25,0.5
+int8_minmax,9.165,9.053,10.659,11.565,9.898,101.03,0.303,1.7,300,person_present_rerun_2026-08-16,2,0.25,0.5
+int8_percentile,9.401,9.254,10.862,12.865,10.149,98.54,0.305,1.68,300,person_present_rerun_2026-08-16,2,0.25,0.5

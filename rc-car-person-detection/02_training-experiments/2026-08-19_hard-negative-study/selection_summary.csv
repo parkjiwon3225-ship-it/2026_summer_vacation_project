@@ -1,0 +1,7 @@
+round,model,selected_epoch,map50_95,precision,recall,f1,baseline_fp_images,baseline_fp_boxes,selected_fp_images,selected_fp_boxes,decision
+round1,S1,none,,,,,12,13,18,21,reject_naive_5e
+round1,S2,none,,,,,20,28,23,32,reject_naive_5e
+round1,R33,none,,,,,2,2,3,3,reject_naive_5e
+round1,R46,none,,,,,1,1,2,2,keep_original_r46
+round2,S1_uniform_x8,7,0.260041,0.647564,0.546598,0.592813,12,13,7,8,screening_candidate
+round2,S2_mined80x10,3,0.253740,0.590901,0.556030,0.572936,20,28,10,13,screening_candidate

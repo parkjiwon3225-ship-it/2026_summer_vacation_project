@@ -1,0 +1,128 @@
+RC-CAR PERSON DETECTOR - 8월 13일 결과 회수 및 2차 학습 순서
+==========================================================
+
+[오늘 준비 완료]
+- 1차 결과 자동 분석: scripts\21_analyze_round1_results.py
+- 검토된 계획으로 2차 config 생성: scripts\22_create_round2_configs.py
+- 2차 계획 형식 예시: configs\round2_plan_template.json
+- USB 결과 바로 분석: 04_analyze_usb_results.bat
+- 확정된 2차 설정 일괄 생성: 05_generate_round2_configs.bat
+
+[중요]
+- Test split은 최종 후보 1~2개가 확정될 때까지 사용하지 않는다.
+- best.pt 파일들만 한 폴더에 섞지 않는다. 실험 폴더 전체를 가져온다.
+- 2차 config는 1차 결과를 확인하기 전에 임의로 만들지 않는다.
+- 결과는 USB에 `round1_results`라는 폴더를 만들어 노트북별로 수집한다.
+- 같은 experiment_name을 두 대에서 썼 경우, USB에 복사할 때 밖쪽 폴더명을 다르게 한다.
+
+1. 각 노트북의 결과 폴더 확인
+-----------------------------
+results\training\실험이름
+
+필수 파일:
+- history.csv
+- config.json
+- device.json
+- warnings.log (경고가 없으면 파일이 없을 수 있음)
+- checkpoints\best.pt
+- checkpoints\last.pt
+
+2. USB에 노트북별 폴더 전체 복사
+--------------------------------
+USB 예시:
+round1_results\
+  home_baseline_100e\
+  school1_low_lr_100e\
+  school2_lightweight_100e\
+  school3_capacity_100e\
+  school4_box_weight_100e\
+  school5_center_radius_100e\
+
+같은 baseline을 두 대에서 실행했다면 예시:
+  school6_baseline_copy\
+  home_baseline_copy\
+
+3. 분석용 노트북 한 대에 결과 모으기
+-----------------------------------
+프로젝트 아래 임시 폴더에 복사:
+results\round1_collected\실험이름\...
+
+4. 자동 분석 실행
+----------------
+conda activate rc-person-detector
+python scripts\21_analyze_round1_results.py --results-root results\round1_collected --expected 6
+
+USB에서 바로 읽을 경우(권장):
+04_analyze_usb_results.bat E:\round1_results 6
+
+E:는 예시이므로 내일 USB에 실제로 표시된 드라이브 문자로 바꾸어야 한다.
+
+학교 결과 6개만 분석하면 --expected 6을 사용한다.
+집 결과까지 준비되어 총 7개를 모았다면 --expected 7로 바꾸어 실행한다.
+
+정상 조건:
+- Results found: 6 / expected 6
+- 각 실험에 best.pt와 last.pt 존재
+- non-finite loss rows 없음
+- 완료되지 않은 실험은 CHECK로 표시되며 마지막 epoch를 확인
+
+생성 결과:
+results\round1_analysis\ROUND1_ANALYSIS.md
+results\round1_analysis\comparison_best_map.csv
+results\round1_analysis\comparison_common_epoch.csv
+results\round1_analysis\analysis.json
+
+5. 분석 결과를 대화에 전달
+--------------------------
+- 터미널 표 전체
+- ROUND1_ANALYSIS.md
+- comparison_best_map.csv
+- 완료되지 않았거나 오류가 난 실험의 warnings.log
+
+6. 2차 실험 결정
+----------------
+- 우승 구조 재현(new seed) 1개를 우선 포함
+- 1차에서 실제 개선이 확인된 LR, box weight, radius만 조합
+- 1위와 2위 구조의 trade-off가 있으면 둘 다 유지
+- 작은 사람 Recall이 명백히 부족할 때만 고해상도 후보 검토
+- 최대 6대이지만 불필요한 실험은 만들지 않는다
+
+7. 확정된 계획으로 config 생성
+-------------------------------
+분석 후 configs\round2_plan.json을 만든 다음:
+python scripts\22_create_round2_configs.py --plan configs\round2_plan.json
+
+또는:
+05_generate_round2_configs.bat
+
+생성 결과:
+configs\round2\round2_gpu*.json
+configs\round2\ROUND2_COMMANDS.txt
+
+8. 각 노트북에 새 config 복사 후 빠른 검사
+-----------------------------------------
+conda activate rc-person-detector
+python -m pip install -e .
+python scripts\13_test_training_step.py
+
+9. 2차 학습 실행
+----------------
+각 노트북에서 ROUND2_COMMANDS.txt의 해당 명령 하나를 실행한다.
+
+10. 시작 후 반드시 확인
+----------------------
+- device: cuda
+- cuda_available: True
+- GPU 이름 정상
+- train_images: 12322
+- valid_images: 1531
+- batch size 정상
+- start_epoch: 1
+- 첫 epoch가 정상 완료되고 best.pt/last.pt 생성
+- epoch 예상시간을 보고 금요일 오전까지 완료 가능한지 확인
+
+[목요일 목표]
+- 오전: 6개 결과 회수와 자동 비교
+- 점심 전후: 2차 실험 계획 확정
+- 오후: 설정 생성, 6대 배포, 첫 epoch와 checkpoint 확인
+- 퇴근 전: 전원/절전/충전 상태 확인 후 밤샘 학습
